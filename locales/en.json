@@ -1,0 +1,15 @@
+{
+  "language": "en",
+  "languageName": "English",
+  "status": "Preparation only: the public site is currently available in French. A complete, reviewed English translation remains to be completed.",
+  "brand": "Ecolia",
+  "tagline": "The platform connecting the whole African school community.",
+  "navigation": {
+    "home": "Home",
+    "features": "Features",
+    "about": "About",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact"
+  }
+}

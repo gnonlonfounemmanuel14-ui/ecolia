@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Choisissez la formule d’abonnement de votre établissement sur Ecolia." />
+    <title>Choisissez votre formule — Ecolia</title>
+    <link rel="icon" href="../assets/logos/ecolia-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <script type="module" src="../js/choose-plan.js"></script>
+    <script type="module" src="../js/logout.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <header class="choose-plan-header">
+      <div class="wrap choose-plan-bar">
+        <a class="brand" href="../index.html"
+          ><img src="../assets/logos/ecolia.svg" alt="Ecolia"
+        /></a>
+        <button class="btn secondary small" type="button" data-logout>Se déconnecter</button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-hero">
+        <div class="wrap">
+          <span class="eyebrow">Dernière étape</span>
+          <h1>Choisissez votre formule</h1>
+          <p class="lead">
+            Sélectionnez l’abonnement de votre établissement. Vous pourrez passer à une formule
+            supérieure quand votre effectif grandira.
+          </p>
+        </div>
+      </section>
+      <section class="page-content">
+        <div class="wrap">
+          <p class="back-row" data-back-row hidden><a href="school.html">← Retour au tableau de bord</a></p>
+          <p class="auth-message" data-plan-message role="status" aria-live="polite" hidden></p>
+          <div class="pricing-grid" data-plan-grid></div>
+          <noscript>
+            <p>Activez JavaScript pour choisir votre formule.</p>
+          </noscript>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

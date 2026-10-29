@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Diagnostic de connexion — Ecolia</title>
+    <link rel="icon" href="../assets/logos/ecolia-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <style>
+      .diag { max-width: 820px; margin: 0 auto; padding: 32px 20px 64px; }
+      .diag h1 { font-family: var(--display); color: var(--navy); margin: 0 0 6px; }
+      .diag-list { list-style: none; margin: 22px 0; padding: 0; display: grid; gap: 10px; }
+      .diag-item { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+      .diag-icon { font-weight: 800; font-size: 1.2rem; line-height: 1.4; text-align: center; }
+      .diag-ok { border-color: #bfe6d9; } .diag-ok .diag-icon { color: var(--green); }
+      .diag-warn { border-color: #f3d27a; background: #fffaf0; } .diag-warn .diag-icon { color: #b7791f; }
+      .diag-fail { border-color: #f1b4b4; background: #fff5f5; } .diag-fail .diag-icon { color: var(--red); }
+      .diag-info .diag-icon { color: var(--muted); }
+      .diag-title { font-weight: 700; margin: 0; }
+      .diag-detail, .diag-fix { margin: 4px 0 0; color: var(--muted); }
+      .diag-fix { color: var(--ink); }
+      .diag-report { width: 100%; min-height: 180px; font: 0.85rem/1.5 ui-monospace, Menlo, Consolas, monospace; padding: 12px; border: 1px solid var(--line); border-radius: 10px; box-sizing: border-box; }
+      .diag-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0 28px; }
+    </style>
+    <script type="module" src="../js/diagnostic.js"></script>
+  </head>
+  <body>
+    <main class="diag" id="main">
+      <a class="brand" href="../index.html"><img src="../assets/logos/ecolia.svg" alt="Ecolia" /></a>
+      <h1>Diagnostic de connexion</h1>
+      <p class="muted">
+        Cette page vérifie, étape par étape, que votre site est bien relié à votre base de données Supabase.
+        Elle ne modifie rien et n’envoie aucune donnée à Ecolia.
+      </p>
+      <div class="diag-actions">
+        <button class="btn green" type="button" data-rerun>Relancer le diagnostic</button>
+        <a class="btn secondary" href="register-school.html">Aller à l’inscription</a>
+      </div>
+      <ol class="diag-list" data-checks aria-live="polite"></ol>
+      <script>
+        // Script classique : il fonctionne même quand la page est ouverte en double-cliquant sur le fichier.
+        if (location.protocol === 'file:') {
+          document.querySelector('[data-checks]').innerHTML =
+            '<li class="diag-item diag-fail"><span class="diag-icon">✖</span><div>' +
+            '<p class="diag-title">Le site est ouvert en double-cliquant sur le fichier</p>' +
+            '<p class="diag-fix">Que faire : dans le terminal, à la racine du projet, tapez « npx serve . -l 5500 », puis ouvrez http://localhost:5500/pages/diagnostic.html. ' +
+            'Sans serveur, le navigateur bloque les scripts : c’est la cause la plus fréquente d’un bouton qui ne fait rien.</p></div></li>';
+        }
+      </script>
+      <h2>Rapport à copier</h2>
+      <p class="muted">En cas de problème, copiez ce texte et envoyez-le (il ne contient aucune clé secrète).</p>
+      <textarea class="diag-report" data-report readonly aria-label="Rapport de diagnostic"></textarea>
+      <div class="diag-actions"><button class="btn secondary" type="button" data-copy>Copier le rapport</button></div>
+    </main>
+  </body>
+</html>

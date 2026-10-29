@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Résultat de votre paiement Ecolia." />
+    <title>Votre paiement — Ecolia</title>
+    <link rel="icon" href="../assets/logos/ecolia-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <script type="module" src="../js/payment-result.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <main id="main" class="auth-layout auth-page">
+      <section class="auth-main">
+        <div class="form-card auth-card" role="status" aria-live="polite">
+          <a class="brand auth-brand" href="../index.html"
+            ><img src="../assets/logos/ecolia.svg" alt="Ecolia"
+          /></a>
+          <h1 data-result-title>Vérification du paiement…</h1>
+          <p class="form-intro" data-result-text>
+            Veuillez patienter quelques instants. Ne fermez pas cette page.
+          </p>
+          <div class="result-actions" data-result-actions></div>
+          <noscript><p>Activez JavaScript pour voir le résultat de votre paiement.</p></noscript>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Tableau de bord de votre établissement sur Ecolia." />
+    <title>Tableau de bord — Ecolia</title>
+    <link rel="icon" href="../assets/logos/ecolia-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/school.css" />
+    <script type="module" src="../js/school/app.js"></script>
+  </head>
+  <body class="dash">
+    <a class="skip-link" href="#view">Aller au contenu</a>
+    <div class="dash-layout">
+      <aside class="dash-side">
+        <a class="brand" href="#/accueil"
+          ><img src="../assets/logos/ecolia.svg" alt="Ecolia"
+        /></a>
+        <nav class="dash-nav" aria-label="Navigation de l’établissement" data-nav></nav>
+        <div class="dash-side-links">
+          <a href="contact.html">Aide et contact</a>
+          <a href="../index.html">Site Ecolia</a>
+        </div>
+      </aside>
+      <div class="dash-main">
+        <header class="dash-top">
+          <div class="dash-who">
+            <strong data-school-name>Mon établissement</strong>
+            <span data-user-name></span>
+          </div>
+          <button class="btn secondary small" type="button" data-logout>Se déconnecter</button>
+        </header>
+        <main id="view" class="dash-view" tabindex="-1" data-view>
+          <p class="loading">Chargement…</p>
+        </main>
+      </div>
+    </div>
+    <div class="toasts" aria-live="polite" data-toasts></div>
+  </body>
+</html>

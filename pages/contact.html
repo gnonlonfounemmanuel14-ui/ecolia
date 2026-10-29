@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Contactez Ecolia au sujet de la gestion et de l’organisation de votre établissement."
+    />
+    <title>Contact — Ecolia</title>
+    <link rel="icon" href="../assets/logos/ecolia-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/forms-api.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <!-- HEADER PRINCIPAL ECOLIA -->
+    <header class="site-header">
+      <div class="wrap nav-row">
+        <a class="brand" href="../index.html" aria-label="Ecolia, accueil"
+          ><img src="../assets/logos/ecolia.svg" alt="Ecolia"
+        /></a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+          <span aria-hidden="true">☰</span> Menu
+        </button>
+        <nav class="nav-links" id="primary-navigation" aria-label="Navigation principale">
+          <a data-nav="home" href="../index.html">Accueil</a>
+          <a data-nav="features" href="../pages/features.html">Fonctionnalités</a>
+          <a data-nav="pricing" href="../pages/pricing.html">Tarifs</a>
+          <a data-nav="about" href="../pages/about.html">À propos</a>
+          <a class="mobile-nav-auth" href="../pages/login.html">Connexion</a>
+          <a class="mobile-nav-auth" href="../pages/register-school.html">Inscription</a>
+        </nav>
+        <div class="nav-ctas">
+          <a class="btn secondary small" href="../pages/login.html">Connexion</a
+          ><a class="btn green small" href="../pages/register-school.html">Inscription</a>
+        </div>
+      </div>
+    </header>
+    <!-- CONTENU PRINCIPAL DE LA PAGE -->
+    <main id="main">
+      <div class="wrap return-home-row">
+        <a class="btn secondary small" href="../index.html"
+          >&larr; Retour &agrave; l&rsquo;accueil</a
+        >
+      </div>
+      <section class="page-hero">
+        <div class="wrap">
+          <span class="eyebrow">Contact</span>
+          <h1>Parlons de votre établissement.</h1>
+          <p class="lead">
+            Une question sur l’organisation scolaire, les fonctionnalités ou les besoins de votre
+            établissement ? Écrivez-nous.
+          </p>
+        </div>
+      </section>
+      <section class="page-content">
+        <div class="wrap contact-layout">
+          <form class="form-card" data-local-form data-contact-form method="post" action="">
+            <h2>Envoyer un message</h2>
+            <p class="notice" role="status" aria-live="polite" data-auth-submit-message hidden></p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Nom complet</label>
+                <input id="name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Adresse e-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="school">Établissement <span class="help">(facultatif)</span> </label>
+                <input id="school" name="school" autocomplete="organization" />
+              </div>
+              <div class="field">
+                <label for="topic">Sujet</label>
+                <select id="topic" name="topic" required>
+                  <option value="">Choisir un sujet</option>
+                  <option>Découvrir Ecolia</option>
+                  <option>Partager un besoin</option>
+                  <option>Récupération de mot de passe</option>
+                  <option>Autre demande</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+            </div>
+            <button class="btn green" type="submit">Envoyer le message</button>
+          </form>
+          <aside class="contact-panel" data-contact-panel hidden>
+            <span class="eyebrow">Contact direct</span>
+            <h2>Joindre Ecolia</h2>
+            <p>Choisissez le moyen de contact qui vous convient.</p>
+            <div data-contact-list></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER PRINCIPAL ECOLIA -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="../index.html"><img src="../assets/logos/ecolia.svg" alt="Ecolia" /></a>
+            <p>La plateforme qui connecte toute la communauté scolaire africaine.</p>
+          </div>
+          <nav class="footer-col" aria-label="Navigation de pied de page">
+            <h2>Navigation</h2>
+            <a href="../index.html">Accueil</a><a href="../pages/features.html">Fonctionnalités</a
+            ><a href="../pages/about.html">À propos</a><a href="../pages/pricing.html">Tarifs</a
+            ><a href="../pages/faq.html">FAQ</a>
+          </nav>
+          <div class="footer-col" data-contact-column hidden>
+            <h2>Contact direct</h2>
+            <div data-contact-list></div>
+          </div>
+          <nav class="footer-col" aria-label="Informations utiles">
+            <h2>Informations utiles</h2>
+            <a href="../pages/faq.html">Questions fréquentes</a
+            ><a href="../pages/contact.html">Nous contacter</a>
+          </nav>
+          <nav class="footer-col" data-social-column hidden aria-label="Réseaux sociaux">
+            <h2>Réseaux sociaux</h2>
+            <div data-social-list></div>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <span>© Ecolia</span
+          ><span>La plateforme qui connecte toute la communauté scolaire africaine.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

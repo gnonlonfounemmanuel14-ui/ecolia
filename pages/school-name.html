@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Indiquez le nom de votre établissement pour finaliser votre inscription Ecolia." />
+    <title>Votre établissement — Ecolia</title>
+    <link rel="icon" href="../assets/logos/ecolia-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <script type="module" src="../js/school-name.js"></script>
+    <script type="module" src="../js/logout.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <main id="main" class="auth-layout auth-page">
+      <section class="auth-main">
+        <form class="form-card auth-card" data-school-form>
+          <a class="brand auth-brand" href="../index.html"
+            ><img src="../assets/logos/ecolia.svg" alt="Ecolia"
+          /></a>
+          <h1>Dernière étape</h1>
+          <p class="form-intro" data-user-line>Vérification de votre connexion…</p>
+          <div class="field" data-school-field hidden>
+            <label for="school">Nom de l’établissement</label>
+            <input
+              id="school"
+              name="school"
+              type="text"
+              autocomplete="organization"
+              required
+              minlength="2"
+              maxlength="120"
+              placeholder="Ex. : Collège Les Palmiers"
+            />
+          </div>
+          <button class="btn green auth-submit" type="submit" data-school-submit disabled>
+            Continuer
+          </button>
+          <p
+            class="auth-message"
+            data-auth-submit-message
+            role="status"
+            aria-live="polite"
+            hidden
+          ></p>
+          <p class="auth-switch">
+            <button class="linklike" type="button" data-logout>Ce n’est pas vous ? Se déconnecter</button>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

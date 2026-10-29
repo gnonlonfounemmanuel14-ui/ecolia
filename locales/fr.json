@@ -1,0 +1,19 @@
+{
+  "language": "fr",
+  "languageName": "Français",
+  "brand": "Ecolia",
+  "tagline": "La plateforme qui connecte toute la communauté scolaire africaine.",
+  "navigation": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "about": "À propos",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "status": {
+    "platform": "Projet en préparation",
+    "authentication": "Aucun service d’authentification n’est connecté.",
+    "forms": "Les formulaires ne transmettent aucune donnée."
+  }
+}

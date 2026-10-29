@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Confirmez votre adresse e-mail pour activer votre compte Ecolia." />
+    <title>Vérifiez votre e-mail — Ecolia</title>
+    <link rel="icon" href="../assets/logos/ecolia-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <script type="module" src="../js/verify-email.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <main id="main" class="auth-layout auth-page">
+      <section class="auth-main">
+        <form class="form-card auth-card" data-verify-form>
+          <a class="brand auth-brand" href="../index.html"
+            ><img src="../assets/logos/ecolia.svg" alt="Ecolia"
+          /></a>
+          <h1 data-verify-title>Vérifiez votre e-mail</h1>
+          <p class="form-intro" data-verify-intro>
+            Nous vous avons envoyé un lien de confirmation. Cliquez dessus pour activer votre
+            compte, puis choisissez votre formule.
+          </p>
+          <p class="form-intro" data-email-line hidden></p>
+          <div class="field" data-email-field hidden>
+            <label for="email">Adresse e-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="vous@exemple.com"
+            />
+          </div>
+          <button class="btn green auth-submit" type="submit">Renvoyer l’e-mail</button>
+          <p
+            class="auth-message"
+            data-auth-submit-message
+            role="status"
+            aria-live="polite"
+            hidden
+          ></p>
+          <p class="auth-switch"><a href="login.html">Retour à la connexion</a></p>
+          <p class="auth-switch"><a href="contact.html">Besoin d’aide ? Contactez-nous</a></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

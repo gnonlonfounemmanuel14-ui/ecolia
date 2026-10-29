@@ -1,0 +1,23 @@
+<!-- En-tete partage : identite et navigation publique -->
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="{{base}}index.html" aria-label="Ecolia, accueil"
+      ><img src="{{base}}assets/logos/ecolia.svg" alt="Ecolia"
+    /></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+      <span aria-hidden="true">☰</span> Menu
+    </button>
+    <nav class="nav-links" id="primary-navigation" aria-label="Navigation principale">
+      <a data-nav="home" href="{{base}}index.html">Accueil</a>
+      <a data-nav="features" href="{{base}}pages/features.html">Fonctionnalités</a>
+      <a data-nav="pricing" href="{{base}}pages/pricing.html">Tarifs</a>
+      <a data-nav="about" href="{{base}}pages/about.html">À propos</a>
+      <a class="mobile-nav-auth" href="{{base}}pages/login.html">Connexion</a>
+      <a class="mobile-nav-auth" href="{{base}}pages/register-school.html">Inscription</a>
+    </nav>
+    <div class="nav-ctas">
+      <a class="btn secondary small" href="{{base}}pages/login.html">Connexion</a
+      ><a class="btn green small" href="{{base}}pages/register-school.html">Inscription</a>
+    </div>
+  </div>
+</header>

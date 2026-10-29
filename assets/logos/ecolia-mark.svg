@@ -1,0 +1,16 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 56 56"
+  role="img"
+  aria-labelledby="title"
+>
+  <title id="title">Ecolia</title>
+  <rect width="56" height="56" rx="16" fill="#EAF3FA" />
+  <g fill="none" stroke="#16A085" stroke-width="3.5" stroke-linecap="round">
+    <path d="M12 28c6-12 17-17 30-13M12 28c6 12 17 17 30 13M12 28h30" />
+    <circle cx="12" cy="28" r="4.5" fill="#163A5F" stroke="#163A5F" />
+    <circle cx="42" cy="15" r="4.5" fill="#16A085" />
+    <circle cx="42" cy="41" r="4.5" fill="#16A085" />
+    <circle cx="42" cy="28" r="4.5" fill="#F59E0B" stroke="#F59E0B" />
+  </g>
+</svg>
